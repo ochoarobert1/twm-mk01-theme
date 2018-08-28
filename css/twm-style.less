@@ -1,19 +1,24 @@
 /* --------------------------------------------------------------
 /* MAIN LESS MIXINS AND FUNCTIONS - LESSHAT
 -------------------------------------------------------------- */
+
 @import 'less/lesshat.less';
 /* --------------------------------------------------------------
 /* WordPress Core
 -------------------------------------------------------------- */
+
 @import 'less/wordpress-core.less';
 /* --------------------------------------------------------------
 /* Shortcodes Ultimate Custom - ACTIVATE ONLY IF USED
 -------------------------------------------------------------- */
+
 //@import 'less/shortcodes-ultimate-custom.less';
 /* --------------------------------------------------------------
 Variables
 -------------------------------------------------------------- */
+
 /* Pixels */
+
 @1: 1px;
 @2: 2px;
 @3: 3px;
@@ -25,18 +30,20 @@ Variables
 @25: (@20 + @5);
 @30: (@15 + @15);
 /* Colors */
+
 @black: #000000;
+@grayf1: #F1F1F1;
 @gray3: #333333;
 @gray6: #666666;
 @gray9: #999999;
 @grayc: #cccccc;
-@grayf0: #f0f0f0;
+@grayd: #DDDDDD;
 @white: #ffffff;
-@blue: #2B7BCB;
-@orange: #FFB12A;
+@green: #A4C242;
 
 /* Theme commons
 -------------------------------------------------------------- */
+
 .loading:empty {
     background: url('../images/common/loading.gif') no-repeat center center;
     min-height: 32px;
@@ -48,27 +55,190 @@ Variables
 /* --------------------------------------------------------------
 Body default
 -------------------------------------------------------------- */
-html, body { height: 100%; }
+
+html,
+body {
+    height: 100%;
+}
 
 body {
     font-weight: 400;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 a {
     .transition(all .2s ease-in-out);
 
-    &:hover { text-decoration: none; }
+    &:hover {
+        text-decoration: none;
+    }
 }
 
-.table-custom {
-    border: 0;
+/* --------------------------------------------------------------
+1.- HEADER
+-------------------------------------------------------------- */
+
+.the-header {
+    padding: 10px;
+    background: @white;
+
+    & .navbar {
+        & .nav-link {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #343434 !important;
+            opacity: 1;
+            font-size: 1rem;
+            padding: 15px !important;
+            letter-spacing: -.4px;
+        }
+    }
 }
 
-.table-custom th {
-    border: 0;
+
+/* --------------------------------------------------------------
+3.- HOME - LANDING
+-------------------------------------------------------------- */
+
+/* ABOUT */
+
+.about-content {
+    text-align: center;
+    font-size: 1.70rem;
+    padding: 0 3rem;
+    line-height: 2.7rem;
+    padding: 6rem 0;
+
+    & h1 {
+        position: relative;
+        font-size: 2.7rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        &:after {
+            position: absolute;
+            width: 22%;
+            z-index: -1;
+            height: 25px;
+            background: whitesmoke;
+            right: 50%;
+            bottom: -5px;
+            content: '';
+        }
+    }
+
+    & p {
+        margin-bottom: 0;
+    }
+
+    & strong {
+        text-transform: uppercase;
+    }
 }
 
-.table-custom td {
-    border: 0;
+/* CUSTOM DIVIDER FOR TITLES */
+
+.custom-divider {
+    background: url(../images/line-divider.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height: 15px;
+    margin: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+/* EMPRENDEDORES */
+
+.emprendedores-section {
+    background: @grayf1;
+    z-index: 0;
+    position: relative;
+    text-align: center;
+    font-size: 1.70rem;
+    padding: 0 3rem;
+    line-height: 2.7rem;
+    padding: 6rem 0;
+}
+
+.emprendedores-title {
+    padding: 0 6rem;
+
+    & h2 {
+        position: relative;
+        font-size: 2.7rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        z-index: 2;
+
+        &:after {
+            position: absolute;
+            width: 22%;
+            z-index: 0;
+            height: 25px;
+            background: #E2E2E2;
+            right: 50%;
+            bottom: -5px;
+            content: '';
+        }
+    }
+}
+
+.emprendedores-item {
+    padding: 0 1.5rem;
+
+    & .media-custom {
+        & h5 {
+            font-size: 3rem;
+        }
+        & .media-body {
+            text-align: left;
+            font-size: 1.2rem;
+            line-height: 2.1rem;
+        }
+    }
+}
+
+.emprendedores-end-content {
+
+    & .emprendedores-item {
+        position: relative;
+
+        & .emprendedores-item-title {
+            position: absolute;
+            background: @green;
+            box-shadow: 0px 10px 20px #d4d4d4;
+            bottom: -40%;
+            left: 12%;
+            max-width: 75%;
+            padding: 2rem 1.3rem;
+
+            & h3 {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: @white;
+                line-height: 1.7rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.emprendedores-contact-caller {
+    text-align: center;
+    padding: 5rem 0;
+
+    & .btn-caller {
+        background: #d68c42;
+        background: -moz-linear-gradient(top, #d68c42 0%, #c65f38 100%);
+        background: -webkit-linear-gradient(top, #d68c42 0%, #c65f38 100%);
+        background: linear-gradient(to bottom, #d68c42 0%, #c65f38 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d68c42', endColorstr='#c65f38', GradientType=0);
+        color: @white;
+        padding: 1rem 2.5rem;
+        border-radius: 0;
+        font-weight: 800;
+        letter-spacing: .1px;
+        font-size: 1.1rem;
+        margin: 3rem 0;
+    }
 }

@@ -10,8 +10,9 @@ require_once('includes/wp_enqueue_styles.php');
     ENQUEUE AND REGISTER JS
 -------------------------------------------------------------- */
 
-if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue");
-function my_jquery_enqueue() {
+if (!is_admin()) add_action("wp_enqueue_scripts", "twm_jquery_enqueue");
+
+function twm_jquery_enqueue() {
     wp_deregister_script('jquery');
     wp_deregister_script('jquery-migrate');
     if ($_SERVER['REMOTE_ADDR'] == '::1') {
@@ -46,7 +47,7 @@ require_once('includes/class-wp-bootstrap-navwalker.php');
     ADD CUSTOM WORDPRESS FUNCTIONS
 -------------------------------------------------------------- */
 
-require_once('includes/wp_custom_functions.php');
+//require_once('includes/wp_custom_functions.php');
 
 /* --------------------------------------------------------------
     ADD REQUIRED WORDPRESS PLUGINS
@@ -54,7 +55,6 @@ require_once('includes/wp_custom_functions.php');
 
 require_once('includes/class-tgm-plugin-activation.php');
 require_once('includes/class-required-plugins.php');
-
 
 /* --------------------------------------------------------------
     ADD CUSTOM WOOCOMMERCE OVERRIDES
@@ -128,14 +128,13 @@ function twm_widgets_init() {
 }
 
 /* --------------------------------------------------------------
-    CUSTOM ADMIN LOGIN
+    CUSTOM ADMIN INFO
 -------------------------------------------------------------- */
 
 function custom_login_logo() {
     $version_remove = NULL;
     wp_register_style('wp-custom-login', get_template_directory_uri() . '/css/custom-wordpress-admin-style.css', false, $version_remove, 'all');
     wp_enqueue_style('wp-custom-login');
-
 }
 add_action('login_head', 'custom_login_logo');
 
