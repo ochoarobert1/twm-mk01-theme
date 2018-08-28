@@ -18,16 +18,16 @@
         <?php /* FAVICONS */ ?>
         <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png" />
         <?php /* THEME NAVBAR COLOR */ ?>
-        <meta name="msapplication-TileColor" content="#BE1B20" />
+        <meta name="msapplication-TileColor" content="#94B732" />
         <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png" />
-        <meta name="theme-color" content="#BE1B20" />
+        <meta name="theme-color" content="#94B732" />
         <?php /* AUTHOR INFORMATION */ ?>
         <meta name="language" content="<?php echo get_bloginfo('language'); ?>" />
-        <meta name="author" content="ADMIN_SITIO" />
-        <meta name="copyright" content="DIRECCION_URL" />
+        <meta name="author" content="Train With Me" />
+        <meta name="copyright" content="https://trainwithme.com" />
         <meta name="geo.position" content="10.333333;-67.033333" />
         <meta name="ICBM" content="10.333333, -67.033333" />
-        <meta name="geo.region" content="VE" />
+        <meta name="geo.region" content="US" />
         <meta name="geo.placename" content="DIRECCION_AUTOR" />
         <meta name="DC.title" content="<?php if (is_home()) { echo get_bloginfo('name') . ' | ' . get_bloginfo('description'); } else { echo get_the_title() . ' | ' . get_bloginfo('name'); } ?>" />
         <?php /* MAIN TITLE - CALL HEADER MAIN FUNCTIONS */ ?>

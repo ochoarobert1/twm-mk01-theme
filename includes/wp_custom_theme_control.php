@@ -1,25 +1,25 @@
 <?php
 /* --------------------------------------------------------------
-CUSTOM AREA FOR OPTIONS DATA - PROYECTO
+CUSTOM AREA FOR OPTIONS DATA - twm
 -------------------------------------------------------------- */
 
 /* CUSTOM MENU PAGE AND FUNCTIONS IN ADMIN */
-function register_PROYECTO_settings() {
+function register_twm_settings() {
     //register our settings
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_dir' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_email' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_telf' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_mob' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_fb' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_tw' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_ig' );
-    register_setting( 'PROYECTO-settings-group', 'PROYECTO_yt' );
+    register_setting( 'twm-settings-group', 'twm_dir' );
+    register_setting( 'twm-settings-group', 'twm_email' );
+    register_setting( 'twm-settings-group', 'twm_telf' );
+    register_setting( 'twm-settings-group', 'twm_mob' );
+    register_setting( 'twm-settings-group', 'twm_fb' );
+    register_setting( 'twm-settings-group', 'twm_tw' );
+    register_setting( 'twm-settings-group', 'twm_ig' );
+    register_setting( 'twm-settings-group', 'twm_yt' );
 }
 
 function my_admin_menu() {
-    add_menu_page( 'Opciones del Sitio', 'Opciones del Sitio', 'manage_options', 'PROYECTO_custom_options', 'my_custom_menu_page', get_template_directory_uri() . '/images/plugin-icon.png', 120  );
+    add_menu_page( 'Opciones del Sitio', 'Opciones del Sitio', 'manage_options', 'twm_custom_options', 'my_custom_menu_page', get_template_directory_uri() . '/images/plugin-icon.png', 120  );
     /* call register settings function */
-    add_action( 'admin_init', 'register_PROYECTO_settings' );
+    add_action( 'admin_init', 'register_twm_settings' );
 }
 
 add_action( 'admin_menu', 'my_admin_menu' );
@@ -28,7 +28,7 @@ add_action( 'admin_menu', 'my_admin_menu' );
 
 /* CUSTOM CSS FOR THIS SECTION */
 function load_custom_wp_admin_style($hook) {
-    if( $hook != 'toplevel_page_PROYECTO_custom_options' ) {
+    if( $hook != 'toplevel_page_twm_custom_options' ) {
         return;
     }
     /* ENQUEUE THE CSS */
@@ -61,59 +61,59 @@ add_action( 'admin_menu', 'set_admin_menu_separator' );
 /* CUSTOM MENU PAGE CONTENT */
 function my_custom_menu_page() { ?>
 
-<div class="PROYECTO_custom_options-header">
+<div class="twm_custom_options-header">
     <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>" class="logo-header" />
     <h1><?php echo get_admin_page_title(); ?></h1>
     <div class="custom-clearfix"></div>
 </div>
-<div class="PROYECTO_custom_options-content">
+<div class="twm_custom_options-content">
     <form method="post" action="options.php">
-        <?php settings_fields( 'PROYECTO-settings-group' ); ?>
-        <?php do_settings_sections( 'PROYECTO-settings-group' ); ?>
+        <?php settings_fields( 'twm-settings-group' ); ?>
+        <?php do_settings_sections( 'twm-settings-group' ); ?>
         <table class="form-table">
 
             <tr valign="top">
-                <th scope="row"><?php _e('Dirección', 'PROYECTO'); ?></th>
-                <td><textarea name="PROYECTO_dir" cols="95" rows="5"><?php echo esc_attr( get_option('PROYECTO_dir') ); ?></textarea></td>
+                <th scope="row"><?php _e('Dirección', 'twm'); ?></th>
+                <td><textarea name="twm_dir" cols="95" rows="5"><?php echo esc_attr( get_option('twm_dir') ); ?></textarea></td>
             </tr>
 
             <tr valign="top">
-                <th scope="row"><?php _e('Correo Electrónico', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_email" value="<?php echo esc_attr( get_option('PROYECTO_email') ); ?>" /></td>
+                <th scope="row"><?php _e('Correo Electrónico', 'twm'); ?></th>
+                <td><input type="text" size="90" name="twm_email" value="<?php echo esc_attr( get_option('twm_email') ); ?>" /></td>
             </tr>
 
             <tr valign="top">
-                <th scope="row"><?php _e('Teléfono', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_telf" value="<?php echo esc_attr( get_option('PROYECTO_telf') ); ?>" /></td>
+                <th scope="row"><?php _e('Teléfono', 'twm'); ?></th>
+                <td><input type="text" size="90" name="twm_telf" value="<?php echo esc_attr( get_option('twm_telf') ); ?>" /></td>
             </tr>
 
             <tr valign="top">
-                <th scope="row"><?php _e('Móvil', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_mob" value="<?php echo esc_attr( get_option('PROYECTO_mob') ); ?>" /></td>
+                <th scope="row"><?php _e('Móvil', 'twm'); ?></th>
+                <td><input type="text" size="90" name="twm_mob" value="<?php echo esc_attr( get_option('twm_mob') ); ?>" /></td>
             </tr>
 
             <tr valign="top">
-                <th scope="row" colspan="2"><h3><?php _e('Redes Sociales', 'PROYECTO'); ?></h3></th>
+                <th scope="row" colspan="2"><h3><?php _e('Redes Sociales', 'twm'); ?></h3></th>
             </tr>
 
             <tr valign="top">
-                <th scope="row"><?php _e('Perfil de Facebook', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_fb" value="<?php echo esc_attr( get_option('PROYECTO_fb') ); ?>" /></td>
+                <th scope="row"><?php _e('Perfil de Facebook', 'twm'); ?></th>
+                <td><input type="text" size="90" name="twm_fb" value="<?php echo esc_attr( get_option('twm_fb') ); ?>" /></td>
             </tr>
 
             <tr valign="top">
-                <th scope="row"><?php _e('Perfil de Twitter', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_tw" value="<?php echo esc_attr( get_option('PROYECTO_tw') ); ?>" /></td>
+                <th scope="row"><?php _e('Perfil de Twitter', 'twm'); ?></th>
+                <td><input type="text" size="90" name="twm_tw" value="<?php echo esc_attr( get_option('twm_tw') ); ?>" /></td>
             </tr>
 
             <tr valign="top">
-                <th scope="row"><?php _e('Perfil de Instagram', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_ig" value="<?php echo esc_attr( get_option('PROYECTO_ig') ); ?>" /></td>
+                <th scope="row"><?php _e('Perfil de Instagram', 'twm'); ?></th>
+                <td><input type="text" size="90" name="twm_ig" value="<?php echo esc_attr( get_option('twm_ig') ); ?>" /></td>
             </tr>
 
             <tr valign="top">
-                <th scope="row"><?php _e('Canal de Youtube', 'PROYECTO'); ?></th>
-                <td><input type="text" size="90" name="PROYECTO_yt" value="<?php echo esc_attr( get_option('PROYECTO_yt') ); ?>" /></td>
+                <th scope="row"><?php _e('Canal de Youtube', 'twm'); ?></th>
+                <td><input type="text" size="90" name="twm_yt" value="<?php echo esc_attr( get_option('twm_yt') ); ?>" /></td>
             </tr>
 
         </table>

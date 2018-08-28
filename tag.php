@@ -47,12 +47,12 @@
             <?php else: ?>
             <article>
                 <h2>
-                    <?php _e('Disculpe, su busqueda no arrojo ningun resultado', 'PROYECTO'); ?>
+                    <?php _e('Disculpe, su busqueda no arrojo ningun resultado', 'twm'); ?>
                 </h2>
                 <h3>
-                    <?php _e('Dirígete nuevamente al', 'PROYECTO'); ?>
-                    <a href="<?php echo home_url('/'); ?>" title="<?php _e('Volver al Inicio', 'PROYECTO'); ?>">
-                        <?php _e('inicio', 'PROYECTO'); ?>
+                    <?php _e('Dirígete nuevamente al', 'twm'); ?>
+                    <a href="<?php echo home_url('/'); ?>" title="<?php _e('Volver al Inicio', 'twm'); ?>">
+                        <?php _e('inicio', 'twm'); ?>
                     </a>.</h3>
             </article>
             <?php endif; ?>
