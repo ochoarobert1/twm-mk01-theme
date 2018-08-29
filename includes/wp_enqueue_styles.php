@@ -21,12 +21,12 @@ function twm_load_css() {
             //wp_enqueue_style('flickity-css');
 
             /*- OWL ON LOCAL -*/
-            //wp_register_style('owl-css', get_template_directory_uri() . '/css/owl.carousel.min.css', false, '2.3.4', 'all');
-            //wp_enqueue_style('owl-css');
+            wp_register_style('owl-css', get_template_directory_uri() . '/css/owl.carousel.min.css', false, '2.3.4', 'all');
+            wp_enqueue_style('owl-css');
 
             /*- OWL ON LOCAL - NORMAL THEME -*/
-            //wp_register_style('owltheme-css', get_template_directory_uri() . '/css/owl.theme.default.min.css', false, '2.3.4', 'all');
-            //wp_enqueue_style('owltheme-css');
+            wp_register_style('owltheme-css', get_template_directory_uri() . '/css/owl.theme.default.min.css', false, '2.3.4', 'all');
+            wp_enqueue_style('owltheme-css');
 
 
         } else {
@@ -48,16 +48,16 @@ function twm_load_css() {
             //wp_enqueue_style('flickity-css');
 
             /*- OWL -*/
-            //wp_register_style('owl-css', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', false, '2.3.4', 'all');
-            //wp_enqueue_style('owl-css');
+            wp_register_style('owl-css', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css', false, '2.3.4', 'all');
+            wp_enqueue_style('owl-css');
 
             /*- OWL - THEME DEFAULT -*/
-            //wp_register_style('owltheme-css', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css', false, '2.3.4', 'all');
-            //wp_enqueue_style('owltheme-css');
+            wp_register_style('owltheme-css', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css', false, '2.3.4', 'all');
+            wp_enqueue_style('owltheme-css');
         }
 
         /*- GOOGLE FONTS -*/
-        wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900', false, $version_remove, 'all');
+        wp_register_style('google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900|Raleway:100,200,300,400,500,600,700,800,900', false, $version_remove, 'all');
         wp_enqueue_style('google-fonts');
 
         /*- MAIN STYLE -*/

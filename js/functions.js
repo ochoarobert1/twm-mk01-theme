@@ -1,7 +1,17 @@
 jQuery(document).ready(function ($) {
     "use strict";
-    jQuery("#sticker").sticky({
-        topSpacing: 0
-    });
     jQuery("body").niceScroll();
-}); /* end of as page load scripts */
+
+    /* OWL CAROUSEL */
+    jQuery('.slider-container').owlCarousel({
+        items: 6,
+        margin: 30,
+        loop: false,
+        dots: false,
+        nav: true,
+        center: true,
+        autoplay: true,
+        startPosition: 1
+    });
+
+});

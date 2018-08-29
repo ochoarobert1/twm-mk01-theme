@@ -109,7 +109,20 @@ a {
     line-height: 2.7rem;
     padding: 6rem 0;
 
-    & h1 {
+    & p {
+        margin-bottom: 0;
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.70rem;
+    line-height: 2.7rem;
+
+    & h1,
+    h2,
+    h3,
+    h4 {
         position: relative;
         font-size: 2.7rem;
         margin-bottom: 2rem;
@@ -124,14 +137,6 @@ a {
             bottom: -5px;
             content: '';
         }
-    }
-
-    & p {
-        margin-bottom: 0;
-    }
-
-    & strong {
-        text-transform: uppercase;
     }
 }
 
@@ -173,7 +178,7 @@ a {
         &:after {
             position: absolute;
             width: 22%;
-            z-index: 0;
+            z-index: -1;
             height: 25px;
             background: #E2E2E2;
             right: 50%;
@@ -198,11 +203,20 @@ a {
     }
 }
 
-.emprendedores-end-content {
+.emprendedores-contact-caller {
+    text-align: center;
+    padding: 5rem 0;
+
+    & .btn-caller {
+        margin: 3rem 0;
+    }
+}
+
+.emprendedores-start-content {
+    margin-top: -8rem;
+    padding-bottom: 10rem;
 
     & .emprendedores-item {
-        position: relative;
-
         & .emprendedores-item-title {
             position: absolute;
             background: @green;
@@ -223,22 +237,142 @@ a {
     }
 }
 
-.emprendedores-contact-caller {
-    text-align: center;
-    padding: 5rem 0;
 
-    & .btn-caller {
-        background: #d68c42;
-        background: -moz-linear-gradient(top, #d68c42 0%, #c65f38 100%);
-        background: -webkit-linear-gradient(top, #d68c42 0%, #c65f38 100%);
-        background: linear-gradient(to bottom, #d68c42 0%, #c65f38 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d68c42', endColorstr='#c65f38', GradientType=0);
-        color: @white;
-        padding: 1rem 2.5rem;
-        border-radius: 0;
-        font-weight: 800;
-        letter-spacing: .1px;
-        font-size: 1.1rem;
-        margin: 3rem 0;
+.btn-orange {
+    background: #d68c42;
+    background: -moz-linear-gradient(top, #d68c42 0%, #c65f38 100%);
+    background: -webkit-linear-gradient(top, #d68c42 0%, #c65f38 100%);
+    background: linear-gradient(to bottom, #d68c42 0%, #c65f38 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d68c42', endColorstr='#c65f38', GradientType=0);
+    color: @white;
+    border: 0;
+    padding: 1rem 2.5rem;
+    border-radius: 0;
+    font-weight: 800;
+    letter-spacing: .1px;
+    font-size: 1.1rem;
+}
+
+
+/* DESCANSO */
+
+.big-divider-content {
+    background: url(../images/divider-img.png);
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 16px #a0a0a0;
+    min-height: 70vh;
+
+    & .divider-text {
+        position: relative;
+        padding: 8rem 5rem;
+        padding-right: 7rem;
+        font-size: 1.8rem;
+
+        & .divider-text-quote {
+            position: absolute;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            font-size: 13rem;
+            line-height: 0;
+            color: @green;
+        }
+
+        & .divider-text-quote-1 {
+            top: 10rem;
+            left: 1rem;
+        }
+
+        & .divider-text-quote-2 {
+            bottom: 1rem;
+            right: 2rem;
+        }
+    }
+}
+
+.casos-slider-container {
+    padding: 3rem 0;
+
+    & .owl-nav {
+        font-size: 5rem;
+        line-height: 2rem;
+    }
+}
+
+.slider-item {
+    box-shadow: 0 0 30px #e6e6e6;
+    text-align: center;
+    margin: 15px 0;
+    margin-bottom: 4rem;
+
+    & .slider-item-wrapper {
+        padding: 2rem;
+        position: relative;
+
+        & .btn-orange {
+            position: absolute;
+            left: 3rem;
+            bottom: -2rem;
+        }
+    }
+
+    & .slider-item-text {
+        padding: 0 4rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+
+    & img {
+        display: inline-block !important;
+        border-radius: 100%;
+        max-width: 170px;
+        margin-bottom: 2rem;
+    }
+
+    & h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+}
+
+.proximo-text {
+    font-size: 1.2rem;
+
+    & p {
+        margin-bottom: 0;
+    }
+
+    & h2 {
+        font-family: 'Poppins', 'sans-serif';
+        font-weight: 600;
+        font-size: 2.3rem;
+        margin-bottom: 2.5rem;
+    }
+
+    & strong {
+        text-transform: uppercase;
+    }
+
+    & ul {
+        list-style: none;
+        line-height: 2.2rem;
+        margin: 2rem 0;
+        padding-left: 2rem;
+
+        & li {
+            position: relative;
+
+            &:before {
+                content: ' ';
+                position: absolute;
+                left: -30px;
+                top: 10px;
+                background: url(../images/list-icon.png);
+                background-size: cover;
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 }

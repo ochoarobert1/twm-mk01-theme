@@ -333,13 +333,27 @@ a:hover {
   line-height: 2.7rem;
   padding: 6rem 0;
 }
-.about-content h1 {
+.about-content p {
+  margin-bottom: 0;
+}
+.section-title {
+  text-align: center;
+  font-size: 1.70rem;
+  line-height: 2.7rem;
+}
+.section-title h1,
+.section-title h2,
+.section-title h3,
+.section-title h4 {
   position: relative;
   font-size: 2.7rem;
   margin-bottom: 2rem;
   font-weight: 700;
 }
-.about-content h1:after {
+.section-title h1:after,
+.section-title h2:after,
+.section-title h3:after,
+.section-title h4:after {
   position: absolute;
   width: 22%;
   z-index: -1;
@@ -348,12 +362,6 @@ a:hover {
   right: 50%;
   bottom: -5px;
   content: '';
-}
-.about-content p {
-  margin-bottom: 0;
-}
-.about-content strong {
-  text-transform: uppercase;
 }
 /* CUSTOM DIVIDER FOR TITLES */
 .custom-divider {
@@ -389,7 +397,7 @@ a:hover {
 .emprendedores-title h2:after {
   position: absolute;
   width: 22%;
-  z-index: 0;
+  z-index: -1;
   height: 25px;
   background: #E2E2E2;
   right: 50%;
@@ -407,10 +415,18 @@ a:hover {
   font-size: 1.2rem;
   line-height: 2.1rem;
 }
-.emprendedores-end-content .emprendedores-item {
-  position: relative;
+.emprendedores-contact-caller {
+  text-align: center;
+  padding: 5rem 0;
 }
-.emprendedores-end-content .emprendedores-item .emprendedores-item-title {
+.emprendedores-contact-caller .btn-caller {
+  margin: 3rem 0;
+}
+.emprendedores-start-content {
+  margin-top: -8rem;
+  padding-bottom: 10rem;
+}
+.emprendedores-start-content .emprendedores-item .emprendedores-item-title {
   position: absolute;
   background: #a4c242;
   box-shadow: 0px 10px 20px #d4d4d4;
@@ -419,28 +435,126 @@ a:hover {
   max-width: 75%;
   padding: 2rem 1.3rem;
 }
-.emprendedores-end-content .emprendedores-item .emprendedores-item-title h3 {
+.emprendedores-start-content .emprendedores-item .emprendedores-item-title h3 {
   font-size: 1.1rem;
   font-weight: 600;
   color: #ffffff;
   line-height: 1.7rem;
   margin-bottom: 0;
 }
-.emprendedores-contact-caller {
-  text-align: center;
-  padding: 5rem 0;
-}
-.emprendedores-contact-caller .btn-caller {
+.btn-orange {
   background: #d68c42;
   background: -moz-linear-gradient(top, #d68c42 0%, #c65f38 100%);
   background: -webkit-linear-gradient(top, #d68c42 0%, #c65f38 100%);
   background: linear-gradient(to bottom, #d68c42 0%, #c65f38 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d68c42', endColorstr='#c65f38', GradientType=0);
   color: #ffffff;
+  border: 0;
   padding: 1rem 2.5rem;
   border-radius: 0;
   font-weight: 800;
   letter-spacing: .1px;
   font-size: 1.1rem;
-  margin: 3rem 0;
+}
+/* DESCANSO */
+.big-divider-content {
+  background: url(../images/divider-img.png);
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 0 16px #a0a0a0;
+  min-height: 70vh;
+}
+.big-divider-content .divider-text {
+  position: relative;
+  padding: 8rem 5rem;
+  padding-right: 7rem;
+  font-size: 1.8rem;
+}
+.big-divider-content .divider-text .divider-text-quote {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 13rem;
+  line-height: 0;
+  color: #a4c242;
+}
+.big-divider-content .divider-text .divider-text-quote-1 {
+  top: 10rem;
+  left: 1rem;
+}
+.big-divider-content .divider-text .divider-text-quote-2 {
+  bottom: 1rem;
+  right: 2rem;
+}
+.casos-slider-container {
+  padding: 3rem 0;
+}
+.casos-slider-container .owl-nav {
+  font-size: 5rem;
+  line-height: 2rem;
+}
+.slider-item {
+  box-shadow: 0 0 30px #e6e6e6;
+  text-align: center;
+  margin: 15px 0;
+  margin-bottom: 4rem;
+}
+.slider-item .slider-item-wrapper {
+  padding: 2rem;
+  position: relative;
+}
+.slider-item .slider-item-wrapper .btn-orange {
+  position: absolute;
+  left: 3rem;
+  bottom: -2rem;
+}
+.slider-item .slider-item-text {
+  padding: 0 4rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.slider-item img {
+  display: inline-block !important;
+  border-radius: 100%;
+  max-width: 170px;
+  margin-bottom: 2rem;
+}
+.slider-item h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.proximo-text {
+  font-size: 1.2rem;
+}
+.proximo-text p {
+  margin-bottom: 0;
+}
+.proximo-text h2 {
+  font-family: 'Poppins', 'sans-serif';
+  font-weight: 600;
+  font-size: 2.3rem;
+  margin-bottom: 2.5rem;
+}
+.proximo-text strong {
+  text-transform: uppercase;
+}
+.proximo-text ul {
+  list-style: none;
+  line-height: 2.2rem;
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+.proximo-text ul li {
+  position: relative;
+}
+.proximo-text ul li:before {
+  content: ' ';
+  position: absolute;
+  left: -30px;
+  top: 10px;
+  background: url(../images/list-icon.png);
+  background-size: cover;
+  width: 20px;
+  height: 20px;
 }

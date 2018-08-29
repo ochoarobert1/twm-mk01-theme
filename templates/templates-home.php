@@ -20,17 +20,19 @@
             <div class="container">
                 <div class="row justify-content-md-center">
                     <div class="about-content col-8">
-                        <h1>
-                            <?php _e('Train With ME', 'twm'); ?>
-                        </h1>
-                        <div class="custom-divider"></div>
+                        <div class="section-title">
+                            <h1>
+                                <?php _e('Train With ME', 'twm'); ?>
+                            </h1>
+                            <div class="custom-divider"></div>
+                        </div>
                         <p>El método que te permite ser tu propio jefe, manejar tu horario, trabajar desde casa y, lo mejor,</p>
-                        <p><strong>¡no necesitas invertir dinero!</strong></p>
+                        <p><strong>¡NO NECESITAS INVERTIR DINERO!</strong></p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="emprendedores-section col-12">
+        <section id="necesidades" class="emprendedores-section col-12">
             <div class="container">
                 <div class="row justify-content-md-center">
                     <div class="emprendedores-title col-10">
@@ -67,7 +69,12 @@
                     </div>
                     <div class="w-100"></div>
                 </div>
-                <div class="row emprendedores-end-content">
+
+            </div>
+        </section>
+        <section class="emprendedores-contact-caller col-12">
+            <div class="container">
+                <div class="row emprendedores-start-content">
                     <div class="emprendedores-item col-4 animated fadeIn">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/emp_img_01.jpg" alt="Plan de Entrenamiento" class="img-fluid" />
                         <div class="emprendedores-item-title">
@@ -87,15 +94,98 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="emprendedores-contact-caller col-12">
-            <div class="container">
                 <div class="row justify-content-md-center">
                     <div class="emprendedores-contact-caller-container col-10">
                         <h2>Comienza a ver resultados desde la primera semana</h2>
                     </div>
-                    <button class="btn btn-md btn-caller"><?php _e('¡AGENDA UNA LLAMADA YA!', 'twm'); ?></button>
+                    <button class="btn btn-md btn-orange btn-caller"><?php _e('¡AGENDA UNA LLAMADA YA!', 'twm'); ?></button>
+                </div>
+            </div>
+        </section>
+        <section class="big-divider col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="big-divider-content col-12">
+                        <div class="divider-text col-6">
+                            <div class="divider-text-quote divider-text-quote-1"><span>“</span></div>
+                            <p>Es la flexibilidad de Uber, con un ingreso de Post Grado, aprovechando tus cualidades, con un mentor que te ayuda y guía en todos los pasos.</p>
+                            <div class="divider-text-quote divider-text-quote-2"><span>”</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="casos-exito" class="the-casos col-12">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="casos-slider-container col-12">
+                        <div class="slider-container owl-carousel owl-theme">
+                            <?php $args = array('post_type' => 'casos', 'posts_per_page' => -1, 'order' => 'DESC', 'orderby' => 'date'); ?>
+                            <?php query_posts($args); ?>
+                            <?php if (have_posts()) : $i = 1; ?>
+                            <?php while (have_posts()) : the_post(); ?>
+                            <div class="slider-item slider-item-<?php echo $i; ?> item">
+                                <div class="slider-item-wrapper">
+                                    <?php the_post_thumbnail('casos_img', array('class' => 'img-fluid')); ?>
+                                    <h3><?php the_title(); ?></h3>
+                                    <div class="slider-item-text">
+                                        <p><?php the_excerpt(); ?></p>
+                                    </div>
+                                    <button class="btn-md btn-orange">VER HISTORIA</button>
+                                </div>
+                            </div>
+                            <?php endwhile; ?>
+                            <?php endif; ?>
+                            <?php wp_reset_query(); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="the-proximo col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>
+                                <?php _e('Tú puedes ser el próximo', 'twm'); ?>
+                            </h2>
+                            <div class="custom-divider"></div>
+                        </div>
+                    </div>
+                    <div class="proximo-img col-6">
+                        <img src="" alt="">
+                    </div>
+                    <div class="proximo-text col-4 offset-md-1">
+                        <h2>$100k anuales</h2>
+                        <p>Nuestros asociados han logrado ganar $100k anuales. No necesitas comprar nada, ni te pediremos tu tarjeta de crédito. No es una fórmula mágica.</p>
+                        <p><strong>TE MOSTRAREMOS PASO A PASO COMO LOGRARLO</strong></p>
+                        <ul>
+                            <li>¿Quieres ganar más dinero?</li>
+                            <li>¿Estás dispuesto a aprender?</li>
+                            <li>¿Te gusta hablar con la gente?</li>
+                            <li>¿Tienes metas en tu vida?</li>
+                            <li>¿Quieres libertad financiera?</li>
+                        </ul>
+                        <buttton class="btn btn-md btn-orange">¡AGENDA UNA LLAMADA YA!</buttton>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="the-about col-12">
+            <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="about-content col-8">
+                        <div class="section-title">
+                            <h2>
+                                <?php _e('La plataforma Train With ME', 'twm'); ?>
+                            </h2>
+                            <div class="custom-divider"></div>
+                        </div>
+                        <p>Te enseñaremos una metodología para que aprendas a monetizar dobre las compras regulares que hacen los usuarios en internet.</p>
+                        <p><strong>Una manera diferente y eficiente de ganar dinero</strong></p>
+                    </div>
                 </div>
             </div>
         </section>
